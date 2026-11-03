@@ -1,4 +1,4 @@
-# KZ Duolingo backend
+# LanguAGE
 
 Backend на FastAPI, перенесённый с Kotlin/Spring Boot. Supabase Auth отвечает за регистрацию и вход, а API проверяет access token по JWKS Supabase.
 
