@@ -39,6 +39,9 @@
       "favicon": "./assets/favicon.png",
       "bundler": "metro"
     },
+    "experiments": {
+      "baseUrl": "/LanguAGE"
+    },
     "plugins": [
       "expo-font",
       "expo-splash-screen",

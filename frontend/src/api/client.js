@@ -21,9 +21,23 @@ const getDefaultBaseUrl = () => {
     }
     return 'http://10.212.84.113:8080';
   }
-  // На web берём hostname страницы (работает и с localhost, и с LAN IP)
-  if (typeof window !== 'undefined' && window.location && window.location.hostname) {
-    return `http://${window.location.hostname}:8080`;
+  // На web: поддерживаем ?api=https://... (сохраняется в localStorage для GitHub Pages)
+  if (typeof window !== 'undefined' && window.location) {
+    try {
+      const params = new URLSearchParams(window.location.search);
+      const apiParam = params.get('api');
+      if (apiParam) {
+        const clean = apiParam.replace(/\/+$/, '');
+        window.localStorage?.setItem('language_api_url', clean);
+        return clean;
+      }
+      const saved = window.localStorage?.getItem('language_api_url');
+      if (saved) return saved;
+    } catch (_) {}
+
+    if (window.location.hostname) {
+      return `http://${window.location.hostname}:8080`;
+    }
   }
   return 'http://localhost:8080';
 };
