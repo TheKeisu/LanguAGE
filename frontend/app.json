@@ -1,0 +1,51 @@
+{
+  "expo": {
+    "name": "LanguAGE",
+    "slug": "language-frontend",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "scheme": "language",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#fffde8"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "kz.language.app",
+      "requireFullScreen": true,
+      "infoPlist": {
+        "NSMicrophoneUsageDescription": "Используется для упражнений по произношению казахских слов",
+        "NSSpeechRecognitionUsageDescription": "Используется для проверки произношения в упражнениях"
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/icon.png",
+        "backgroundColor": "#fffde8"
+      },
+      "package": "kz.language.app",
+      "permissions": [
+        "RECORD_AUDIO",
+        "INTERNET",
+        "ACCESS_NETWORK_STATE"
+      ],
+      "softwareKeyboardLayoutMode": "pan"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
+    },
+    "plugins": [
+      "expo-font",
+      "expo-splash-screen",
+      "expo-secure-store"
+    ],
+    "updates": {
+      "enabled": false
+    }
+  }
+}

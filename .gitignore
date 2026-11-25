@@ -94,3 +94,8 @@ id_rsa*
 id_ed25519*
 
 # Keep uv.lock committed for reproducible Python installs.
+
+# AI agent local workspace files
+.agents/
+.antigravity/
+.antigravityignore

@@ -1,0 +1,22 @@
+# Зависимости
+node_modules/
+.expo/
+dist/
+web-build/
+
+# Переменные окружения
+.env
+.env.local
+
+# Система
+.DS_Store
+Thumbs.db
+
+# Expo
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+
